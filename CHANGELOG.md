@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v1.0.5 / 2017-08-09
+
+  - Add a lot more domain to test
+  - Update dev dependencies
+  - Explicitly exit when isDown equals true
+
 ### v1.0.4 / 2017-07-21
 
   - Add more domain to test
