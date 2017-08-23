@@ -1,6 +1,11 @@
 Changelog
 =========
 
+### v1.0.6 / 2017-08-23
+
+  - Add more domain to test
+  - Fix no sound on Linux (process.exit)
+
 ### v1.0.5 / 2017-08-09
 
   - Add a lot more domain to test
