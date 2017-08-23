@@ -112,19 +112,21 @@ var buildSubDomainList = function() {
   return subDomainList;
 };
 
-var playAlarm = function() {
+var playAlarm = function(callback) {
   if (argv.a) {
     player.play(argv.a);
   } else {
-    player.play(__dirname + '/alarm.wav');
+    var child = player.play(__dirname + '/alarm.wav');
+    child.on('close', callback);
   }
 };
 
 var putResult = function(isDown) {
   if (isDown) {
     console.log('\n🍺  It\'s time for a break !');
-    playAlarm();
-    process.exit(0);
+    playAlarm(function() {
+      process.exit(0);
+    });
   } else {
     console.log('\n🦄  Everything is working fine !');
   }
