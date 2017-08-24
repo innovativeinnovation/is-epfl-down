@@ -24,6 +24,9 @@ var testSubDomain = function(subdomain, opts) {
   promises.push(got.head(domain, {
     timeout: opts.timeout,
     retries: 0,
+    headers: {
+      'user-agent': 'DevRunBot (https://epfl-devrun.github.io/devrunbot/)',
+    },
   }).then(function() {
     putDomainIsUp(domain);
   }).catch(function() {
