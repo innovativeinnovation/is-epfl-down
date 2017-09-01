@@ -1,6 +1,10 @@
 Changelog
 =========
 
+### v1.1.0 / 2017-09-01
+
+  - Set user agent string `DevRunBot`
+
 ### v1.0.6 / 2017-08-23
 
   - Add more domain to test
