@@ -42,8 +42,8 @@
   "dependencies": {
     "got": "^7.1.0",
     "jsonfile": "^4.0.0",
-    "log-symbols": "^2.0.0",
+    "log-symbols": "^2.1.0",
     "play-sound": "^1.1.1",
-    "yargs": "^8.0.2"
+    "yargs": "^9.0.1"
   }
 }
