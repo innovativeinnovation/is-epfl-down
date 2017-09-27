@@ -1,6 +1,10 @@
 Changelog
 =========
 
+### v1.1.1 / 2017-09-27
+
+  - Update dependencies
+
 ### v1.1.0 / 2017-09-01
 
   - Set user agent string `DevRunBot`

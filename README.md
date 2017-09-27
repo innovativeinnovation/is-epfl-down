@@ -17,7 +17,7 @@
     <img alt="Dependency Status" src="https://gemnasium.com/badges/github.com/epfl-devrun/is-epfl-down.svg" />
   </a>
   <a href="https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/LICENSE">
-    <img alt="MIT License" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
+    <img alt="Apache License 2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
   </a>
   <a href='https://www.npmjs.com/package/is-epfl-down'>
     <img alt="NPM Version" src="https://img.shields.io/npm/v/is-epfl-down.svg" />
@@ -40,7 +40,7 @@ $ npm install -g is-epfl-down
 
 ### Usage
 
-```
+```console
 $ is-epfl-down
 Usage: is-epfl-down [options]
 
@@ -52,8 +52,8 @@ Options:
   -c, --config     Test your own list of subdomain      [string]
   -t, --timeout    Milliseconds to wait for a server    [number]
   -a, --alarm      Override default alarm sound         [string]
-  -v, --version    Show version number                 [boolean]
   -h, --help       Show help                           [boolean]
+  -v, --version    Show version number                 [boolean]
 
 Examples:
   is-epfl-down -s          Test EPFL services
@@ -95,7 +95,7 @@ To read more about `is-epfl-down` module, please visit the documentation: https:
 Screenshot
 ----------
 
-![Command line](https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/docs/readme/screenshot.png)
+![command line screenshot](https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/docs/readme/screenshot.png)
 
 Contributing
 ------------
