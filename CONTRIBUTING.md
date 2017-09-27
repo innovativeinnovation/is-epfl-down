@@ -8,7 +8,7 @@ Setup
 -----
 
 ```bash
-$ git clone IS_EPFL_DOWN_REPO
+$ git clone REPO
 $ cd is-epfl-down
 $ npm install
 ```
