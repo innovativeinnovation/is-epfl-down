@@ -36,7 +36,7 @@
     "istanbul": "^0.4.5",
     "jscs": "^3.0.7",
     "jshint": "^2.9.5",
-    "mocha": "^3.5.3",
+    "mocha": "^4.0.1",
     "rewire": "^2.5.2"
   },
   "dependencies": {
