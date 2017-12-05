@@ -6,6 +6,7 @@
 'use strict';
 
 var got        = require('got');
+var url        = require('url');
 var logSymbols = require('log-symbols');
 var promises   = [];
 var isDown     = false;
@@ -19,18 +20,23 @@ var putDomainIsDown = function(domain) {
   console.log(logSymbols.error, domain);
 };
 
-var testSubDomain = function(subdomain, opts) {
-  var domain = subdomain + '.epfl.ch';
-  promises.push(got.head(domain, {
+var buildUrl = function(str) {
+  var parsedUrl = url.parse(str);
+  if (parsedUrl.protocol) {
+    return str;
+  }
+  return str + '.epfl.ch';
+};
+
+var testUrls = function(str, opts) {
+  str = buildUrl(str);
+  promises.push(got.head(str, {
     timeout: opts.timeout,
     retries: 0,
-    headers: {
-      'user-agent': 'DevRunBot (https://epfl-devrun.github.io/devrunbot/)',
-    },
   }).then(function() {
-    putDomainIsUp(domain);
-  }).catch(function() {
-    putDomainIsDown(domain);
+    putDomainIsUp(str);
+  }).catch(function(error) {
+    putDomainIsDown(str);
   }));
 };
 
@@ -42,7 +48,7 @@ module.exports = function(domainsList, opts) {
   opts.timeout = opts.timeout || 7000;
 
   for (var i = 0; i < domainsList.length; i++) {
-    testSubDomain(domainsList[i], opts);
+    testUrls(domainsList[i], opts);
   }
   return Promise.all(promises).then(function() {
     return isDown;
