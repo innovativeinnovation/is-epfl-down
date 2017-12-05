@@ -32,16 +32,15 @@
     "coveralls": "npm run coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
-    "babel-plugin-transform-es2015-block-scoping": "^6.26.0",
     "chai": "^4.1.2",
     "istanbul": "^0.4.5",
     "jscs": "^3.0.7",
     "jshint": "^2.9.5",
     "mocha": "^4.0.1",
-    "rewire": "^3.0.0"
+    "rewire": "^3.0.2"
   },
   "dependencies": {
-    "got": "^7.1.0",
+    "got": "^8.0.1",
     "jsonfile": "^4.0.0",
     "log-symbols": "^2.1.0",
     "play-sound": "^1.1.1",
