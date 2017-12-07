@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v2.0.0 / 2017-12-07
+
+  - [Breaking change] - Use HTTPS for protocol-less URLs (previously it defaulted to http).
+  - Add check of specific urls
+  - Update dependencies
+
 ### v1.1.1 / 2017-09-27
 
   - Update dependencies
