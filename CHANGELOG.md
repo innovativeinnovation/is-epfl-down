@@ -1,6 +1,10 @@
 Changelog
 =========
 
+### v2.0.1 / 2018-01-23
+
+  - Update dependencies
+
 ### v2.0.0 / 2017-12-07
 
   - [Breaking change] - Use HTTPS for protocol-less URLs (previously it defaulted to http).
