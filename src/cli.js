@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /*
- * (c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017.
+ * (c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017-2018.
  * See the LICENSE file for more details.
  */
 
@@ -72,7 +72,7 @@ var yargs    = require('yargs')
   .example('$0 -s', 'Test EPFL services')
   .example('$0 -o', 'Test EPFL officials websites')
   .example('$0 -f -t 2000', 'Test EPFL faculties with a timeout of 2 seconds')
-  .epilog('Copyright 2017 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, ' +
+  .epilog('Copyright 2017-2018 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, ' +
     'Switzerland, VPSI.');
 
 var argv = yargs.argv;

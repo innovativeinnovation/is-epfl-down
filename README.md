@@ -60,7 +60,7 @@ Examples:
   is-epfl-down -o          Test EPFL officials websites
   is-epfl-down -f -t 2000  Test EPFL faculties with a timeout of 2 seconds
 
-Copyright 2017 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI.
+Copyright 2017-2018 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI.
 ```
 
 To read more about `is-epfl-down` cli, please visit the documentation: https://epfl-devrun.github.io/projects/is-epfl-down/cli.html.
@@ -115,6 +115,6 @@ License
 
 Apache License 2.0
 
-(c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017.
+(c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017-2018.
 
 See the [LICENSE](LICENSE) file for more details.
