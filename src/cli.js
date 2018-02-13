@@ -41,7 +41,7 @@ var yargs    = require('yargs')
   // Config
   .option('c', {
     alias: 'config',
-    describe: 'Test your own list of subdomain',
+    describe: 'Test your own list of subdomains or urls',
     requiresArg: true,
     type: 'string',
   })
