@@ -1,6 +1,13 @@
 Changelog
 =========
 
+### v2.0.2 / 2018-02-13
+
+  - Add more domain to test
+  - Remove short, git and svn services
+  - Clean usage text
+  - Update copyright
+
 ### v2.0.1 / 2018-01-23
 
   - Update dependencies
