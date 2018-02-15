@@ -49,11 +49,11 @@ Options:
   -o, --officials  Test EPFL officials websites
   -f, --faculties  Test EPFL faculties websites
   -s, --services   Test EPFL services
-  -c, --config     Test your own list of subdomain      [string]
-  -t, --timeout    Milliseconds to wait for a server    [number]
-  -a, --alarm      Override default alarm sound         [string]
-  -h, --help       Show help                           [boolean]
-  -v, --version    Show version number                 [boolean]
+  -c, --config     Test your own list of subdomains or urls    [string]
+  -t, --timeout    Milliseconds to wait for a server           [number]
+  -a, --alarm      Override default alarm sound                [string]
+  -h, --help       Show help                                  [boolean]
+  -v, --version    Show version number                        [boolean]
 
 Examples:
   is-epfl-down -s          Test EPFL services
@@ -109,6 +109,11 @@ Developers
 
   * [Olivier Bieler](https://github.com/obieler)
   * [William Belle](https://github.com/williambelle)
+
+Contributors
+------------
+
+  * [Nicolas Borboën](https://github.com/ponsfrilus)
 
 License
 -------
