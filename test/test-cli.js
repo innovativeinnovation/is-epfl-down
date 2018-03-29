@@ -10,12 +10,12 @@ var version = require('../package').version;
 
 describe('is-epfl-down cli', function() {
   this.timeout(15000);
-  var cliOption = '-m';
+  var nextCliOption = ['-m'];
   var response;
 
   beforeEach(function(done) {
     var execFile = require('child_process').execFile;
-    execFile('./src/cli.js', [cliOption], function(error, stdout) {
+    execFile('./src/cli.js', nextCliOption, function(error, stdout) {
       if (error) {
         throw error;
       }
@@ -26,28 +26,28 @@ describe('is-epfl-down cli', function() {
 
   it('should match "working fine" with option -m', function() {
     response.should.match(/working fine/);
-    cliOption = '--config=./test/testConfigGood.json';
+    nextCliOption = ['--config=./test/testConfigGood.json'];
   });
 
   it('should match "working fine" with a good config', function() {
     response.should.match(/working fine/);
-    cliOption = '--unicorn';
+    nextCliOption = ['--unicorn'];
   });
 
   it('should not match "time for a break|working fine" ' +
     'with option --unicorn', function() {
     response.should.not.match(/time for a break|working fine/);
-    cliOption = '--config=./test/testConfigBad.json';
+    nextCliOption = ['--config=./test/testConfigBad.json', '-q'];
   });
 
-  it('should not match "time for a break" with a bad config', function() {
+  it('should match "time for a break" with a bad config', function() {
     response.should.match(/time for a break/);
-    cliOption = '-m -t 10';
+    nextCliOption = ['-m', '-t 10', '-q'];
   });
 
   it('should match "time for a break" with option -t 10', function() {
-    response.should.not.match(/time for a break/);
-    cliOption = '-v';
+    response.should.match(/time for a break/);
+    nextCliOption = ['-v'];
   });
 
   it('should match version with option -v', function() {
