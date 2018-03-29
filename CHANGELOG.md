@@ -1,6 +1,14 @@
 Changelog
 =========
 
+### v2.1.0 / 2018-03-29
+
+  - Add cli argument `--quiet`
+  - Disable `package-lock.json`
+  - Update dependencies
+  - Improve README
+  - Fix integration tests
+
 ### v2.0.2 / 2018-02-13
 
   - Add more domain to test
