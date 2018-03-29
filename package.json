@@ -36,14 +36,14 @@
     "istanbul": "^0.4.5",
     "jscs": "^3.0.7",
     "jshint": "^2.9.5",
-    "mocha": "^5.0.0",
+    "mocha": "^5.0.5",
     "rewire": "^3.0.2"
   },
   "dependencies": {
-    "got": "^8.0.3",
+    "got": "^8.3.0",
     "jsonfile": "^4.0.0",
     "log-symbols": "^2.2.0",
-    "play-sound": "^1.1.1",
-    "yargs": "^11.0.0"
+    "play-sound": "^1.1.2",
+    "yargs": "^11.1.0"
   }
 }
