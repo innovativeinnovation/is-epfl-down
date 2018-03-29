@@ -62,6 +62,13 @@ var yargs    = require('yargs')
     type: 'string',
   })
 
+  .option('q', {
+    alias: 'quiet',
+    describe: 'No alarm sound',
+    default: false,
+    type: 'boolean',
+  })
+
   // Version
   .alias('v', 'version')
 
@@ -120,9 +127,13 @@ var playAlarm = function(callback) {
 var putResult = function(isDown) {
   if (isDown) {
     console.log('\n🍺  It\'s time for a break !');
-    playAlarm(function() {
+    if (!argv.q) {
+      playAlarm(function() {
+        process.exit(0);
+      });
+    } else {
       process.exit(0);
-    });
+    }
   } else {
     console.log('\n🦄  Everything is working fine !');
   }
