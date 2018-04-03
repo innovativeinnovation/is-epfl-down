@@ -3,19 +3,17 @@
  * See the LICENSE file for more details.
  */
 
-'use strict';
-
-var should  = require('chai').should();
+require('chai').should();
 var version = require('../package').version;
 
-describe('is-epfl-down cli', function() {
+describe('is-epfl-down cli', function () {
   this.timeout(15000);
   var nextCliOption = ['-m'];
   var response;
 
-  beforeEach(function(done) {
+  beforeEach(function (done) {
     var execFile = require('child_process').execFile;
-    execFile('./src/cli.js', nextCliOption, function(error, stdout) {
+    execFile('./src/cli.js', nextCliOption, function (error, stdout) {
       if (error) {
         throw error;
       }
@@ -24,33 +22,33 @@ describe('is-epfl-down cli', function() {
     });
   });
 
-  it('should match "working fine" with option -m', function() {
+  it('should match "working fine" with option -m', function () {
     response.should.match(/working fine/);
     nextCliOption = ['--config=./test/testConfigGood.json'];
   });
 
-  it('should match "working fine" with a good config', function() {
+  it('should match "working fine" with a good config', function () {
     response.should.match(/working fine/);
     nextCliOption = ['--unicorn'];
   });
 
   it('should not match "time for a break|working fine" ' +
-    'with option --unicorn', function() {
+    'with option --unicorn', function () {
     response.should.not.match(/time for a break|working fine/);
     nextCliOption = ['--config=./test/testConfigBad.json', '-q'];
   });
 
-  it('should match "time for a break" with a bad config', function() {
+  it('should match "time for a break" with a bad config', function () {
     response.should.match(/time for a break/);
     nextCliOption = ['-m', '-t 10', '-q'];
   });
 
-  it('should match "time for a break" with option -t 10', function() {
+  it('should match "time for a break" with option -t 10', function () {
     response.should.match(/time for a break/);
     nextCliOption = ['-v'];
   });
 
-  it('should match version with option -v', function() {
+  it('should match version with option -v', function () {
     response.should.equal(version + '\n');
   });
 });

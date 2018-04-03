@@ -5,37 +5,36 @@
  * See the LICENSE file for more details.
  */
 
-'use strict';
-
 var isEpflDown = require('./index.js');
 var subDomains = require('./subdomain.json');
 
 var jsonfile = require('jsonfile');
-var player   = require('play-sound')();
-var yargs    = require('yargs')
+var player = require('play-sound')();
+var path = require('path');
+var yargs = require('yargs')
 
   // Main
   .option('m', {
     alias: 'main',
-    describe: 'Test EPFL main site',
+    describe: 'Test EPFL main site'
   })
 
   // Officials
   .option('o', {
     alias: 'officials',
-    describe: 'Test EPFL officials websites',
+    describe: 'Test EPFL officials websites'
   })
 
   // Faculties
   .option('f', {
     alias: 'faculties',
-    describe: 'Test EPFL faculties websites',
+    describe: 'Test EPFL faculties websites'
   })
 
   // Services
   .option('s', {
     alias: 'services',
-    describe: 'Test EPFL services',
+    describe: 'Test EPFL services'
   })
 
   // Config
@@ -43,7 +42,7 @@ var yargs    = require('yargs')
     alias: 'config',
     describe: 'Test your own list of subdomains or urls',
     requiresArg: true,
-    type: 'string',
+    type: 'string'
   })
 
   // Timeout
@@ -51,7 +50,7 @@ var yargs    = require('yargs')
     alias: 'timeout',
     describe: 'Milliseconds to wait for a server',
     requiresArg: true,
-    type: 'number',
+    type: 'number'
   })
 
   // Alarm
@@ -59,14 +58,14 @@ var yargs    = require('yargs')
     alias: 'alarm',
     describe: 'Override default alarm sound',
     requiresArg: true,
-    type: 'string',
+    type: 'string'
   })
 
   .option('q', {
     alias: 'quiet',
     describe: 'No alarm sound',
     default: false,
-    type: 'boolean',
+    type: 'boolean'
   })
 
   // Version
@@ -84,7 +83,7 @@ var yargs    = require('yargs')
 
 var argv = yargs.argv;
 
-var buildSubDomainList = function() {
+var buildSubDomainList = function () {
   var subDomainList = [];
   if (argv['?']) {
     yargs.showHelp();
@@ -115,20 +114,20 @@ var buildSubDomainList = function() {
   return subDomainList;
 };
 
-var playAlarm = function(callback) {
+var playAlarm = function (callback) {
   if (argv.a) {
     player.play(argv.a);
   } else {
-    var child = player.play(__dirname + '/alarm.wav');
+    var child = player.play(path.join(__dirname, '/alarm.wav'));
     child.on('close', callback);
   }
 };
 
-var putResult = function(isDown) {
+var putResult = function (isDown) {
   if (isDown) {
     console.log('\n🍺  It\'s time for a break !');
     if (!argv.q) {
-      playAlarm(function() {
+      playAlarm(function () {
         process.exit(0);
       });
     } else {
