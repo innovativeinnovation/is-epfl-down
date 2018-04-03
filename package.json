@@ -27,15 +27,19 @@
     "src/alarm.wav"
   ],
   "scripts": {
-    "test": "jshint . && jscs . && mocha",
+    "test": "eslint . && mocha",
     "coverage": "istanbul cover _mocha",
     "coveralls": "npm run coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "istanbul": "^0.4.5",
-    "jscs": "^3.0.7",
-    "jshint": "^2.9.5",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
     "mocha": "^5.0.5",
     "rewire": "^3.0.2"
   },
