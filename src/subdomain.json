@@ -18,6 +18,7 @@
     "camipro",
     "dam2",
     "directory",
+    "distrilog",
     "http://doodle.epfl.ch",
     "epnet",
     "fm",
@@ -66,12 +67,15 @@
     "services",
     "shop",
     "static",
+    "support",
     "tequila",
     "tremplin",
     "uc",
     "video",
+    "videoserv2",
     "wiki",
-    "wikis"
+    "wikis",
+    "wordpress"
   ],
   "faculties": [
     "cdh",
