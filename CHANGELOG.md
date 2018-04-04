@@ -1,6 +1,11 @@
 Changelog
 =========
 
+### v2.2.0 / 2018-04-04
+
+  - Add more domain to test
+  - Move to eslint
+
 ### v2.1.0 / 2018-03-29
 
   - Add cli argument `--quiet`
