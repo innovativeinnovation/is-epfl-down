@@ -23,6 +23,7 @@
   "bin": "src/cli.js",
   "files": [
     "src/subdomain.json",
+    "src/icon.png",
     "src/cli.js",
     "src/alarm.wav"
   ],
@@ -47,6 +48,7 @@
     "got": "^8.3.0",
     "jsonfile": "^4.0.0",
     "log-symbols": "^2.2.0",
+    "node-notifier": "^5.2.1",
     "play-sound": "^1.1.2",
     "yargs": "^11.1.0"
   }

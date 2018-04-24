@@ -8,6 +8,7 @@
 var isEpflDown = require('./index.js');
 var subDomains = require('./subdomain.json');
 
+var notifier = require('node-notifier');
 var jsonfile = require('jsonfile');
 var player = require('play-sound')();
 var path = require('path');
@@ -61,9 +62,18 @@ var yargs = require('yargs')
     type: 'string'
   })
 
+  // Quiet
   .option('q', {
     alias: 'quiet',
     describe: 'No alarm sound',
+    default: false,
+    type: 'boolean'
+  })
+
+  // Notify
+  .option('n', {
+    alias: 'notify',
+    describe: 'Show a native notification',
     default: false,
     type: 'boolean'
   })
@@ -125,7 +135,18 @@ var playAlarm = function (callback) {
 
 var putResult = function (isDown) {
   if (isDown) {
-    console.log('\n🍺  It\'s time for a break !');
+    var downMsg = '🍺  It\'s time for a break!';
+    console.log('\n' + downMsg);
+    var notifyOptions = {
+      title: 'is-epfl-down',
+      message: downMsg
+    };
+    if (process.platform === 'linux') {
+      notifyOptions.icon = path.join(__dirname, 'icon.png');
+    }
+    if (argv.n) {
+      notifier.notify(notifyOptions);
+    }
     if (!argv.q) {
       playAlarm(function () {
         process.exit(0);
@@ -134,7 +155,7 @@ var putResult = function (isDown) {
       process.exit(0);
     }
   } else {
-    console.log('\n🦄  Everything is working fine !');
+    console.log('\n🦄  Everything is working fine!');
   }
 };
 
