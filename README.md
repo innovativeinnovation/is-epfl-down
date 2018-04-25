@@ -44,22 +44,30 @@ $ npm install -g is-epfl-down
 $ is-epfl-down
 Usage: is-epfl-down [options]
 
-Options:
+Startup options:
+  -h, --help     Show help                                             [boolean]
+  -v, --version  Show version number                                   [boolean]
+
+Hosts and urls options:
+  -c, --config     Test your own list of subdomains or urls             [string]
+  -f, --faculties  Test EPFL faculties websites
   -m, --main       Test EPFL main site
   -o, --officials  Test EPFL officials websites
-  -f, --faculties  Test EPFL faculties websites
   -s, --services   Test EPFL services
-  -c, --config     Test your own list of subdomains or urls             [string]
   -t, --timeout    Milliseconds to wait for a server                    [number]
-  -a, --alarm      Override default alarm sound                         [string]
-  -q, --quiet      No alarm sound                     [boolean] [default: false]
-  -h, --help       Show help                                           [boolean]
-  -v, --version    Show version number                                 [boolean]
+
+Notifications options:
+  -a, --alarm   Override default alarm sound                            [string]
+  -n, --notify  Show a native notification            [boolean] [default: false]
+  -q, --quiet   No alarm sound                        [boolean] [default: false]
 
 Examples:
-  is-epfl-down -s          Test EPFL services
-  is-epfl-down -o          Test EPFL officials websites
+  is-epfl-down -m          Test EPFL main site
+  is-epfl-down -s -n       Test EPFL services and use native notification
   is-epfl-down -f -t 2000  Test EPFL faculties with a timeout of 2 seconds
+
+Documentation:
+  https://epfl-devrun.github.io/projects/is-epfl-down/cli.html
 
 Copyright 2017-2018 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI.
 ```

@@ -78,6 +78,11 @@ var yargs = require('yargs')
     type: 'boolean'
   })
 
+  // Groups
+  .group(['h', 'v'], 'Startup options:')
+  .group(['c', 'f', 'm', 'o', 's', 't'], 'Hosts and urls options:')
+  .group(['a', 'n', 'q'], 'Notifications options:')
+
   // Version
   .alias('v', 'version')
 
@@ -85,11 +90,16 @@ var yargs = require('yargs')
   .help('h')
   .alias('h', 'help')
   .usage('Usage: $0 [options]')
-  .example('$0 -s', 'Test EPFL services')
-  .example('$0 -o', 'Test EPFL officials websites')
+  .example('$0 -m', 'Test EPFL main site')
+  .example('$0 -s -n', 'Test EPFL services and use native notification')
   .example('$0 -f -t 2000', 'Test EPFL faculties with a timeout of 2 seconds')
-  .epilog('Copyright 2017-2018 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, ' +
-    'Switzerland, VPSI.');
+  .epilog('')
+  .epilog(
+    'Documentation:\n' +
+    '  https://epfl-devrun.github.io/projects/is-epfl-down/cli.html\n\n' +
+    'Copyright 2017-2018 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, ' +
+    'Switzerland, VPSI.'
+  );
 
 var argv = yargs.argv;
 
