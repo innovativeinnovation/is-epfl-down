@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v2.3.0 / 2018-04-26
+
+  - Add native notification (cli argument `--notify`)
+  - Improve command line usage
+  - Update dependencies
+
 ### v2.2.0 / 2018-04-04
 
   - Add more domain to test
