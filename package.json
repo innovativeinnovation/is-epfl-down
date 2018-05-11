@@ -17,7 +17,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/epfl-devrun/is-epfl-down.git",
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "main": "src/index.js",
   "bin": "src/cli.js",
