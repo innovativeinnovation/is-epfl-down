@@ -5,14 +5,14 @@
  * See the LICENSE file for more details.
  */
 
-var isEpflDown = require('./index.js');
-var subDomains = require('./subdomain.json');
+const isEpflDown = require('./index.js');
+const subDomains = require('./subdomain.json');
 
-var notifier = require('node-notifier');
-var jsonfile = require('jsonfile');
-var player = require('play-sound')();
-var path = require('path');
-var yargs = require('yargs')
+const notifier = require('node-notifier');
+const jsonfile = require('jsonfile');
+const player = require('play-sound')();
+const path = require('path');
+const yargs = require('yargs')
 
   // Main
   .option('m', {
@@ -101,10 +101,10 @@ var yargs = require('yargs')
     'Switzerland, VPSI.'
   );
 
-var argv = yargs.argv;
+const argv = yargs.argv;
 
-var buildSubDomainList = function () {
-  var subDomainList = [];
+let buildSubDomainList = () => {
+  let subDomainList = [];
   if (argv['?']) {
     yargs.showHelp();
   }
@@ -134,20 +134,20 @@ var buildSubDomainList = function () {
   return subDomainList;
 };
 
-var playAlarm = function (callback) {
+let playAlarm = (callback) => {
   if (argv.a) {
     player.play(argv.a);
   } else {
-    var child = player.play(path.join(__dirname, '/alarm.wav'));
+    let child = player.play(path.join(__dirname, '/alarm.wav'));
     child.on('close', callback);
   }
 };
 
-var putResult = function (isDown) {
+let putResult = (isDown) => {
   if (isDown) {
-    var downMsg = '🍺  It\'s time for a break!';
+    let downMsg = '🍺  It\'s time for a break!';
     console.log('\n' + downMsg);
-    var notifyOptions = {
+    let notifyOptions = {
       title: 'is-epfl-down',
       message: downMsg
     };
@@ -158,9 +158,7 @@ var putResult = function (isDown) {
       notifier.notify(notifyOptions);
     }
     if (!argv.q) {
-      playAlarm(function () {
-        process.exit(0);
-      });
+      playAlarm(() => process.exit(0));
     } else {
       process.exit(0);
     }
@@ -169,7 +167,7 @@ var putResult = function (isDown) {
   }
 };
 
-var opts = {};
+let opts = {};
 if (argv.t) {
   opts.timeout = argv.t;
 }

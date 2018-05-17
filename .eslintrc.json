@@ -1,7 +1,8 @@
 {
   "extends": "standard",
   "env": {
-    "mocha": true
+    "mocha": true,
+    "node": true
   },
   "rules": {
     "max-len": [2, 80],
