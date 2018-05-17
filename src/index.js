@@ -3,52 +3,51 @@
  * See the LICENSE file for more details.
  */
 
-var got = require('got');
-var url = require('url');
-var logSymbols = require('log-symbols');
-var promises = [];
-var isDown = false;
+const got = require('got');
+const url = require('url');
+const logSymbols = require('log-symbols');
 
-var putDomainIsUp = function (domain) {
-  console.log(logSymbols.success, domain);
-};
+let promises = [];
+let isDown = false;
 
-var putDomainIsDown = function (domain) {
+let putDomainIsUp = (domain) => console.log(logSymbols.success, domain);
+
+let putDomainIsDown = (domain) => {
   isDown = true;
   console.log(logSymbols.error, domain);
 };
 
-var buildUrl = function (str) {
-  var parsedUrl = url.parse(str);
+let buildUrl = (str) => {
+  let parsedUrl = url.parse(str);
   if (parsedUrl.protocol) {
     return str;
   }
   return str + '.epfl.ch';
 };
 
-var testUrls = function (str, opts) {
+let testUrls = (str, opts) => {
   str = buildUrl(str);
   promises.push(got.head(str, {
     timeout: opts.timeout,
     retries: 0
-  }).then(function () {
-    putDomainIsUp(str);
-  }).catch(function () {
-    putDomainIsDown(str);
-  }));
+  }).then(
+    () => putDomainIsUp(str)
+  ).catch(
+    () => putDomainIsDown(str)
+  ));
 };
 
-module.exports = function (domainsList, opts) {
+module.exports = (domainsList, opts) => {
   if (!Array.isArray(domainsList)) {
     return Promise.reject(new TypeError('Expected an array'));
   }
   opts = opts || {};
   opts.timeout = opts.timeout || 7000;
 
-  for (var i = 0; i < domainsList.length; i++) {
+  for (let i = 0; i < domainsList.length; i++) {
     testUrls(domainsList[i], opts);
   }
-  return Promise.all(promises).then(function () {
+  return Promise.all(promises).then(() => {
     return isDown;
   });
 };
