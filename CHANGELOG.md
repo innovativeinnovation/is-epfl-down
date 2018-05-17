@@ -1,6 +1,14 @@
 Changelog
 =========
 
+### v3.0.0 / 2018-05-17
+
+  - Drop support for Node < 6
+  - Rewrite code
+  - Move to david-dm (watching deps)
+  - Update dependencies
+  - Fix mocha globals (console.log in tests)
+
 ### v2.3.0 / 2018-04-26
 
   - Add native notification (cli argument `--notify`)
