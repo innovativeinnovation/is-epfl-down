@@ -3,7 +3,7 @@
     "www"
   ],
   "services": [
-    "http://1234.epfl.ch",
+    "1234",
     "absences",
     "accred",
     "http://acronymes.epfl.ch",
@@ -44,7 +44,7 @@
     "memento",
     "moocs",
     "moodle",
-    "http://myjob.epfl.ch",
+    "myjob",
     "mynas",
     "myprint",
     "mysql",
