@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v4.0.0 / 2018-08-08
+
+  - Drop support for Node < 8
+  - Update dependencies
+  - Set 1234.epfl.ch and myjob.epfl.ch to https
+
 ### v3.0.0 / 2018-05-17
 
   - Drop support for Node < 6
