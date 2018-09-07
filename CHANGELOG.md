@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v4.1.0 / 2018-09-07
+
+  - Clean subdomains list
+  - Clean contributing
+  - Update dependencies
+
 ### v4.0.0 / 2018-08-08
 
   - Drop support for Node < 8
