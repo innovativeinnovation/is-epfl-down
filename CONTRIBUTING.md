@@ -8,9 +8,9 @@ Setup
 -----
 
 ```bash
-$ git clone REPO
-$ cd is-epfl-down
-$ npm install
+git clone git@github.com:epfl-devrun/is-epfl-down.git
+cd is-epfl-down
+npm i
 ```
 
 Test
@@ -19,20 +19,20 @@ Test
 Unit and integration tests:
 
 ```bash
-$ npm test
+npm t
 ```
 
 Code coverage:
 
 ```bash
-$ npm run coverage
+npm run coverage
 ```
 
 Run
 ---
 
 ```bash
-$ ./src/cli.js
+./src/cli.js
 ```
 
 Release
