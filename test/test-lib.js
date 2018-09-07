@@ -46,7 +46,7 @@ describe('is-epfl-down module', function () {
   });
 
   it('should return false for actu.epfl.ch', () => {
-    return isEpflDown(['actu'], {timeout: 4000}).then((isDown) => {
+    return isEpflDown(['actu'], { timeout: 4000 }).then((isDown) => {
       isDown.should.equal(false);
       cleanup();
     });
