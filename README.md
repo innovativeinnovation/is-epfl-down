@@ -35,13 +35,13 @@ Install this globally and you'll have access to the `is-epfl-down` command
 anywhere on your system.
 
 ```bash
-$ npm install -g is-epfl-down
+npm i is-epfl-down -g
 ```
 
 ### Usage
 
 ```console
-$ is-epfl-down
+is-epfl-down
 Usage: is-epfl-down [options]
 
 Startup options:
@@ -80,7 +80,7 @@ API
 ### Install
 
 ```bash
-$ npm install --save is-epfl-down
+npm i is-epfl-down --save 
 ```
 
 ### Usage
