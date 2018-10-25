@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /*
- * (c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017-2018.
+ * Original work (c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland,
+ * VPSI, 2017-2018.
+ * Modified work (c) William Belle, 2018.
  * See the LICENSE file for more details.
  */
 
@@ -92,14 +94,7 @@ const yargs = require('yargs')
   .usage('Usage: $0 [options]')
   .example('$0 -m', 'Test EPFL main site')
   .example('$0 -s -n', 'Test EPFL services and use native notification')
-  .example('$0 -f -t 2000', 'Test EPFL faculties with a timeout of 2 seconds')
-  .epilog('')
-  .epilog(
-    'Documentation:\n' +
-    '  https://epfl-devrun.github.io/projects/is-epfl-down/cli.html\n\n' +
-    'Copyright 2017-2018 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, ' +
-    'Switzerland, VPSI.'
-  );
+  .example('$0 -f -t 2000', 'Test EPFL faculties with a timeout of 2 seconds');
 
 const argv = yargs.argv;
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Is EPFL Down" src="https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/docs/readme/readme-logo.png">
+  <img alt="Is EPFL Down" src="https://raw.githubusercontent.com/innovativeinnovation/is-epfl-down/master/docs/readme/readme-logo.png">
 </p>
 
 <p align="center">
@@ -7,16 +7,16 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/epfl-devrun/is-epfl-down">
-    <img alt="Travis Status" src="https://travis-ci.org/epfl-devrun/is-epfl-down.svg?branch=master">
+  <a href="https://travis-ci.org/innovativeinnovation/is-epfl-down">
+    <img alt="Travis Status" src="https://travis-ci.org/innovativeinnovation/is-epfl-down.svg?branch=master">
   </a>
-  <a href="https://coveralls.io/github/epfl-devrun/is-epfl-down?branch=master">
-    <img alt="Coverage Status" src="https://coveralls.io/repos/github/epfl-devrun/is-epfl-down/badge.svg?branch=master"/>
+  <a href="https://coveralls.io/github/innovativeinnovation/is-epfl-down?branch=master">
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/innovativeinnovation/is-epfl-down/badge.svg?branch=master"/>
   </a>
-  <a href="https://david-dm.org/epfl-devrun/is-epfl-down">
-    <img alt="Dependency Status" src="https://david-dm.org/epfl-devrun/is-epfl-down/status.svg"/>
+  <a href="https://david-dm.org/innovativeinnovation/is-epfl-down">
+    <img alt="Dependency Status" src="https://david-dm.org/innovativeinnovation/is-epfl-down/status.svg"/>
   </a>
-  <a href="https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/LICENSE">
+  <a href="https://raw.githubusercontent.com/innovativeinnovation/is-epfl-down/master/LICENSE">
     <img alt="Apache License 2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
   </a>
   <a href='https://www.npmjs.com/package/is-epfl-down'>
@@ -65,14 +65,7 @@ Examples:
   is-epfl-down -m          Test EPFL main site
   is-epfl-down -s -n       Test EPFL services and use native notification
   is-epfl-down -f -t 2000  Test EPFL faculties with a timeout of 2 seconds
-
-Documentation:
-  https://epfl-devrun.github.io/projects/is-epfl-down/cli.html
-
-Copyright 2017-2018 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI.
 ```
-
-To read more about `is-epfl-down` cli, please visit the documentation: https://epfl-devrun.github.io/projects/is-epfl-down/cli.html.
 
 API
 ---
@@ -99,12 +92,10 @@ isEpflDown(['unicorn'], {timeout: 1000}).then(function(isDown) {
 });
 ```
 
-To read more about `is-epfl-down` module, please visit the documentation: https://epfl-devrun.github.io/projects/is-epfl-down/api.html.
-
 Screenshot
 ----------
 
-![command line screenshot](https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/docs/readme/screenshot.png)
+![command line screenshot](https://raw.githubusercontent.com/innovativeinnovation/is-epfl-down/master/docs/readme/screenshot.png)
 
 Contributing
 ------------
@@ -129,6 +120,7 @@ License
 
 Apache License 2.0
 
-(c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017-2018.
+Original work (c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017-2018.  
+Modified work (c) William Belle, 2018.
 
 See the [LICENSE](LICENSE) file for more details.

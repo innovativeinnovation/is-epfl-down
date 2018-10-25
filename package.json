@@ -15,7 +15,7 @@
     "Nicolas Borboën <nicolas.borboen@epfl.ch>"
   ],
   "license": "Apache-2.0",
-  "repository": "https://github.com/epfl-devrun/is-epfl-down.git",
+  "repository": "https://github.com/innovativeinnovation/is-epfl-down.git",
   "engines": {
     "node": ">=8"
   },
