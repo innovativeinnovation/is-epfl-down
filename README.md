@@ -67,6 +67,68 @@ Examples:
   is-epfl-down -f -t 2000  Test EPFL faculties with a timeout of 2 seconds
 ```
 
+##### Startup options
+
+`-v`, `--version`  
+Print is-epfl-down's version.
+
+`-h`, `--help`  
+Print is-epfl-down command line options.
+
+##### Hosts and urls options
+
+`-c [file]`, `--config=[file]`  
+Test your own list of subdomains or urls. file must be a path to a json file.
+A json example:
+
+```json
+["actu","blogs","memento","wiki"]
+```
+
+`-f`, `--faculties`  
+Test EPFL faculties websites.
+
+`-m`, `--main`  
+Test EPFL main site.
+
+`-o`, `--officials`  
+Test EPFL officials websites.
+
+`-s`, `--services`  
+Test EPFL services.
+
+`-t [number]`, `--timeout=[number]`  
+Milliseconds to wait for a server to send response headers before aborting
+request.
+
+##### Notifications options
+
+`-a [file]`, `--alarm=[file]`  
+Override default alarm sound. file must be a path to a mp3 or a wav file.
+
+`-n`, `--notify`  
+Show a native notification
+
+`-q`, `--quiet`  
+No alarm sound.
+
+##### Examples
+
+Testing the main site:  
+`is-epfl-down -m`
+
+Testing EPFL services:  
+`is-epfl-down -s`
+
+Testing your own config:  
+`is-epfl-down --config=/path/to/my/config.json`
+
+Testing EPFL faculties with a timeout of 2s:  
+`is-epfl-down -f -t 2000`
+
+Testing EPFL faculties with a specific alarm sound in case of failure:  
+`is-epfl-down -f -a /path/to/my/sound.mp3`
+
 API
 ---
 
@@ -91,6 +153,29 @@ isEpflDown(['unicorn'], {timeout: 1000}).then(function(isDown) {
   //=> true
 });
 ```
+
+### isEpflDown(subDomains, [options])
+
+Returns a Promise with a boolean as parameter.
+
+##### subDomains
+
+Type: `array`
+
+A list of subdomain from EPFL.
+
+##### options
+
+Type: `object`
+
+Any of the following options.
+
+##### timeout
+
+Type: `number`
+
+Milliseconds to wait for a server to send response headers before aborting
+request.
 
 Screenshot
 ----------
