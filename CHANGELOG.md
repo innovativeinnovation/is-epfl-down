@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v4.1.2 / 2018-10-25
+
+  - Remove bottin.epfl.ch
+  - Move external documentation to readme
+  - Update copyright (transfer from EPFL DevRun)
+
 ### v4.1.1 / 2018-09-20
 
   - Update dependencies
