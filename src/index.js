@@ -6,7 +6,6 @@
  */
 
 const got = require('got');
-const url = require('url');
 const logSymbols = require('log-symbols');
 
 let promises = [];
@@ -20,8 +19,7 @@ let putDomainIsDown = (domain) => {
 };
 
 let buildUrl = (str) => {
-  let parsedUrl = url.parse(str);
-  if (parsedUrl.protocol) {
+  if (str.indexOf('http://') !== -1 || str.indexOf('https://') !== -1) {
     return str;
   }
   return str + '.epfl.ch';
