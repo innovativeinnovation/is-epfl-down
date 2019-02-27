@@ -20,7 +20,7 @@
     <img alt="Apache License 2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
   </a>
   <a href='https://www.npmjs.com/package/is-epfl-down'>
-    <img alt="NPM Version" src="https://img.shields.io/npm/v/is-epfl-down.svg" />
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/is-epfl-down.svg"/>
   </a>
 </p>
 
@@ -78,7 +78,7 @@ Print is-epfl-down command line options.
 ##### Hosts and urls options
 
 `-c [file]`, `--config=[file]`  
-Test your own list of subdomains or urls. file must be a path to a json file.
+Test your own list of subdomains or urls. File must be a path to a json file.
 A json example:
 
 ```json
@@ -107,7 +107,7 @@ request.
 Override default alarm sound. file must be a path to a mp3 or a wav file.
 
 `-n`, `--notify`  
-Show a native notification
+Show a native notification.
 
 `-q`, `--quiet`  
 No alarm sound.
@@ -135,7 +135,7 @@ API
 ### Install
 
 ```bash
-npm i is-epfl-down --save 
+npm i is-epfl-down --save
 ```
 
 ### Usage
