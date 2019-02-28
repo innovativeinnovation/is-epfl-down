@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v4.1.3 / 2019-02-28
+
+  - Update dependencies
+  - Test against Node.js 11
+  - Clean readme
+
 ### v4.1.2 / 2018-10-25
 
   - Remove bottin.epfl.ch
