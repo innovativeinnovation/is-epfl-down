@@ -100,9 +100,6 @@ const argv = yargs.argv;
 
 let buildSubDomainList = () => {
   let subDomainList = [];
-  if (argv['?']) {
-    yargs.showHelp();
-  }
   if (argv.m) {
     subDomainList = subDomainList.concat(subDomains.main);
   }
