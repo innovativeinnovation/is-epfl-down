@@ -70,10 +70,10 @@ Examples:
 ##### Startup options
 
 `-v`, `--version`  
-Print is-epfl-down's version.
+Print `is-epfl-down`'s version.
 
 `-h`, `--help`  
-Print is-epfl-down command line options.
+Print `is-epfl-down` command line options.
 
 ##### Hosts and urls options
 
@@ -82,7 +82,7 @@ Test your own list of subdomains or urls. File must be a path to a json file.
 A json example:
 
 ```json
-["actu","blogs","memento","wiki"]
+["actu","blogs","memento","wiki","http://www.epfl.ae"]
 ```
 
 `-f`, `--faculties`  
@@ -143,7 +143,7 @@ npm i is-epfl-down --save
 ```javascript
 var isEpflDown = require('is-epfl-down');
 
-isEpflDown(['www','actu','blogs']).then(function(isDown) {
+isEpflDown(['www','actu','blogs','http://www.epfl.ae']).then(function(isDown) {
   console.log(isDown)
   //=> false
 });
@@ -162,7 +162,7 @@ Returns a Promise with a boolean as parameter.
 
 Type: `array`
 
-A list of subdomain from EPFL.
+A list of subdomains from EPFL or urls.
 
 ##### options
 
@@ -170,7 +170,7 @@ Type: `object`
 
 Any of the following options.
 
-##### timeout
+###### timeout
 
 Type: `number`
 
