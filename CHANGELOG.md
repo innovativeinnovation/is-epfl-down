@@ -1,16 +1,25 @@
 Changelog
 =========
 
+### v4.2.0 / 2019-04-06
+
+  - Add more domain to test
+  - Remove EPFL TV and homepage from subdomains
+  - Remove useless option `-?`
+  - Improve `README.md` documentation API
+  - Move from `istanbul` to `nyc` for code coverage
+  - Update dev dependencies
+
 ### v4.1.3 / 2019-02-28
 
   - Update dependencies
   - Test against Node.js 11
-  - Clean readme
+  - Clean `README.md`
 
 ### v4.1.2 / 2018-10-25
 
   - Remove bottin.epfl.ch
-  - Move external documentation to readme
+  - Move external documentation to `README.md`
   - Update copyright (transfer from EPFL DevRun)
 
 ### v4.1.1 / 2018-09-20
@@ -53,7 +62,7 @@ Changelog
   - Add cli argument `--quiet`
   - Disable `package-lock.json`
   - Update dependencies
-  - Improve README
+  - Improve `README.md`
   - Fix integration tests
 
 ### v2.0.2 / 2018-02-13
