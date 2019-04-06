@@ -38,6 +38,7 @@
     "map",
     "mediatheque",
     "memento",
+    "https://menus.epfl.ch/cgi-bin/getMenus",
     "moocs",
     "moodle",
     "myjob",
@@ -58,6 +59,7 @@
     "rdp",
     "repro",
     "reservations",
+    "restauration",
     "services",
     "shop",
     "static",
@@ -80,6 +82,7 @@
     "sv"
   ],
   "officials": [
+    "http://www.epfl.ae",
     "bachelor",
     "carriere",
     "direction",
