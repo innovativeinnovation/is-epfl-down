@@ -1,6 +1,11 @@
 Changelog
 =========
 
+### v4.3.0 / 2019-04-08
+
+  - Set user-agent
+  - Remove mobile (`m.epfl.ch`) from subdomains
+
 ### v4.2.0 / 2019-04-06
 
   - Add more domain to test
@@ -18,7 +23,7 @@ Changelog
 
 ### v4.1.2 / 2018-10-25
 
-  - Remove bottin.epfl.ch
+  - Remove `bottin.epfl.ch`
   - Move external documentation to `README.md`
   - Update copyright (transfer from EPFL DevRun)
 
@@ -36,7 +41,7 @@ Changelog
 
   - Drop support for Node < 8
   - Update dependencies
-  - Set 1234.epfl.ch and myjob.epfl.ch to https
+  - Set `1234.epfl.ch` and `myjob.epfl.ch` to https
 
 ### v3.0.0 / 2018-05-17
 
