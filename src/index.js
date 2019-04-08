@@ -8,6 +8,9 @@
 const got = require('got');
 const logSymbols = require('log-symbols');
 
+const BotName = 'InnoInnoBot';
+const BotUrl = 'https://github.com/innovativeinnovation/';
+
 let promises = [];
 let isDown = false;
 
@@ -28,6 +31,9 @@ let buildUrl = (str) => {
 let testUrls = (str, opts) => {
   str = buildUrl(str);
   promises.push(got.head(str, {
+    headers: {
+      'user-agent': BotName + '/v1.0.0 - ' + BotUrl
+    },
     timeout: opts.timeout,
     retries: 0
   }).then(
