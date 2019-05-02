@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v4.3.1 / 2019-05-02
+
+  - Update dependencies
+  - Remove `.eslintignore`
+  - Test against Node.js 12
+
 ### v4.3.0 / 2019-04-08
 
   - Set user-agent
