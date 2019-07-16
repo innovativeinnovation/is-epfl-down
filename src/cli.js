@@ -98,7 +98,7 @@ const yargs = require('yargs')
 
 const argv = yargs.argv;
 
-let buildSubDomainList = () => {
+const buildSubDomainList = () => {
   let subDomainList = [];
   if (argv.m) {
     subDomainList = subDomainList.concat(subDomains.main);
@@ -126,20 +126,20 @@ let buildSubDomainList = () => {
   return subDomainList;
 };
 
-let playAlarm = (callback) => {
+const playAlarm = (callback) => {
   if (argv.a) {
     player.play(argv.a);
   } else {
-    let child = player.play(path.join(__dirname, '/alarm.wav'));
+    const child = player.play(path.join(__dirname, '/alarm.wav'));
     child.on('close', callback);
   }
 };
 
-let putResult = (isDown) => {
+const putResult = (isDown) => {
   if (isDown) {
-    let downMsg = '🍺  It\'s time for a break!';
+    const downMsg = '🍺  It\'s time for a break!';
     console.log('\n' + downMsg);
-    let notifyOptions = {
+    const notifyOptions = {
       title: 'is-epfl-down',
       message: downMsg
     };
@@ -159,7 +159,7 @@ let putResult = (isDown) => {
   }
 };
 
-let opts = {};
+const opts = {};
 if (argv.t) {
   opts.timeout = argv.t;
 }

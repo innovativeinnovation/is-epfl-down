@@ -14,7 +14,7 @@ describe('is-epfl-down cli', function () {
   let response;
 
   beforeEach((done) => {
-    let execFile = require('child_process').execFile;
+    const execFile = require('child_process').execFile;
     execFile('./src/cli.js', nextCliOption, (error, stdout) => {
       if (error) {
         throw error;

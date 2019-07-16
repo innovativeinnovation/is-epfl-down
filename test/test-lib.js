@@ -8,7 +8,7 @@
 require('chai').should();
 const rewire = require('rewire');
 
-let isEpflDown = rewire('../src/index.js');
+const isEpflDown = rewire('../src/index.js');
 
 describe('is-epfl-down module', function () {
   let write = '';
@@ -17,7 +17,7 @@ describe('is-epfl-down module', function () {
   this.timeout(15000);
 
   // restore process.stdout.write() and console.log() to their previous glory
-  let cleanup = () => {
+  const cleanup = () => {
     process.stdout.write = write;
     console.log = log;
   };
