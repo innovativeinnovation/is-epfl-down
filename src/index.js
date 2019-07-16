@@ -11,24 +11,24 @@ const logSymbols = require('log-symbols');
 const BotName = 'InnoInnoBot';
 const BotUrl = 'https://github.com/innovativeinnovation/';
 
-let promises = [];
+const promises = [];
 let isDown = false;
 
-let putDomainIsUp = (domain) => console.log(logSymbols.success, domain);
+const putDomainIsUp = (domain) => console.log(logSymbols.success, domain);
 
-let putDomainIsDown = (domain) => {
+const putDomainIsDown = (domain) => {
   isDown = true;
   console.log(logSymbols.error, domain);
 };
 
-let buildUrl = (str) => {
+const buildUrl = (str) => {
   if (str.indexOf('http://') !== -1 || str.indexOf('https://') !== -1) {
     return str;
   }
   return str + '.epfl.ch';
 };
 
-let testUrls = (str, opts) => {
+const testUrls = (str, opts) => {
   str = buildUrl(str);
   promises.push(got.head(str, {
     headers: {
