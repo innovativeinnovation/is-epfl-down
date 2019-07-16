@@ -30,7 +30,7 @@ const buildUrl = (str) => {
 
 const testUrls = (str, opts) => {
   str = buildUrl(str);
-  promises.push(got.head(str, {
+  promises.push(got.get(str, {
     headers: {
       'user-agent': BotName + '/v1.0.0 - ' + BotUrl
     },
