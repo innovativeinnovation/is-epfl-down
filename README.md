@@ -14,7 +14,7 @@
     <img alt="Coverage Status" src="https://coveralls.io/repos/github/innovativeinnovation/is-epfl-down/badge.svg?branch=master"/>
   </a>
   <a href="https://david-dm.org/innovativeinnovation/is-epfl-down">
-    <img alt="Dependency Status" src="https://david-dm.org/innovativeinnovation/is-epfl-down/status.svg"/>
+    <img alt="Dependencies Status" src="https://david-dm.org/innovativeinnovation/is-epfl-down/status.svg"/>
   </a>
   <a href="https://raw.githubusercontent.com/innovativeinnovation/is-epfl-down/master/LICENSE">
     <img alt="Apache License 2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
@@ -104,7 +104,7 @@ request.
 ##### Notifications options
 
 `-a [file]`, `--alarm=[file]`  
-Override default alarm sound. file must be a path to a mp3 or a wav file.
+Override default alarm sound. File must be a path to a mp3 or a wav file.
 
 `-n`, `--notify`  
 Show a native notification.
