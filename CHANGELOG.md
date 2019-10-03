@@ -1,11 +1,15 @@
 Changelog
 =========
 
+### v5.0.1 / 2019-10-03
+
+  - Update dependencies
+
 ### v5.0.0 / 2019-07-18
 
   - Change HTTP method from `HEAD` to `GET`
   - Update dependencies
-  
+
 ### v4.3.1 / 2019-05-02
 
   - Update dependencies
