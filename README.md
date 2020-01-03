@@ -114,19 +114,19 @@ No alarm sound.
 
 ##### Examples
 
-Testing the main site:  
+Test the main site:  
 `is-epfl-down -m`
 
-Testing EPFL services:  
+Test EPFL services:  
 `is-epfl-down -s`
 
-Testing your own config:  
+Test your own config:  
 `is-epfl-down --config=/path/to/my/config.json`
 
-Testing EPFL faculties with a timeout of 2s:  
+Test EPFL faculties with a timeout of 2s:  
 `is-epfl-down -f -t 2000`
 
-Testing EPFL faculties with a specific alarm sound in case of failure:  
+Test EPFL faculties with a specific alarm sound in case of failure:  
 `is-epfl-down -f -a /path/to/my/sound.mp3`
 
 API
@@ -141,15 +141,15 @@ npm i is-epfl-down --save
 ### Usage
 
 ```javascript
-var isEpflDown = require('is-epfl-down');
+const isEpflDown = require('is-epfl-down');
 
 isEpflDown(['www','actu','blogs','http://www.epfl.ae']).then(function(isDown) {
-  console.log(isDown)
+  console.log(isDown);
   //=> false
 });
 
 isEpflDown(['unicorn'], {timeout: 1000}).then(function(isDown) {
-  console.log(isDown)
+  console.log(isDown);
   //=> true
 });
 ```
@@ -192,13 +192,13 @@ See [Contributing](CONTRIBUTING.md).
 Developers
 ----------
 
-  * [Olivier Bieler](https://github.com/obieler)
-  * [William Belle](https://github.com/williambelle)
+* [Olivier Bieler](https://github.com/obieler)
+* [William Belle](https://github.com/williambelle)
 
 Contributors
 ------------
 
-  * [Nicolas Borboën](https://github.com/ponsfrilus)
+* [Nicolas Borboën](https://github.com/ponsfrilus)
 
 License
 -------
