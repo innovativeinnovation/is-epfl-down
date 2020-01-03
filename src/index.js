@@ -14,32 +14,38 @@ const BotUrl = 'https://github.com/innovativeinnovation/';
 const promises = [];
 let isDown = false;
 
-const putDomainIsUp = (domain) => console.log(logSymbols.success, domain);
+const putDomainIsUp = (url) => {
+  console.log(logSymbols.success, removeHttpsFromUrl(url));
+};
 
-const putDomainIsDown = (domain) => {
+const putDomainIsDown = (url) => {
   isDown = true;
-  console.log(logSymbols.error, domain);
+  console.log(logSymbols.error, removeHttpsFromUrl(url));
 };
 
 const buildUrl = (str) => {
   if (str.indexOf('http://') !== -1 || str.indexOf('https://') !== -1) {
     return str;
   }
-  return str + '.epfl.ch';
+  return 'https://' + str + '.epfl.ch';
+};
+
+const removeHttpsFromUrl = (str) => {
+  return str.replace(/^https?:\/\//, '');
 };
 
 const testUrls = (str, opts) => {
-  str = buildUrl(str);
-  promises.push(got.get(str, {
+  const url = buildUrl(str);
+  promises.push(got.get(url, {
     headers: {
       'user-agent': BotName + '/v1.0.0 - ' + BotUrl
     },
     timeout: opts.timeout,
     retries: 0
   }).then(
-    () => putDomainIsUp(str)
+    () => putDomainIsUp(url)
   ).catch(
-    () => putDomainIsDown(str)
+    () => putDomainIsDown(url)
   ));
 };
 

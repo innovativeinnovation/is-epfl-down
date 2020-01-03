@@ -15,9 +15,9 @@
     "Nicolas Borboën <nicolas.borboen@epfl.ch>"
   ],
   "license": "Apache-2.0",
-  "repository": "https://github.com/innovativeinnovation/is-epfl-down.git",
+  "repository": "innovativeinnovation/is-epfl-down",
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "main": "src/index.js",
   "bin": "src/cli.js",
@@ -45,7 +45,7 @@
     "rewire": "^4.0.1"
   },
   "dependencies": {
-    "got": "^9.6.0",
+    "got": "^10.2.1",
     "jsonfile": "^5.0.0",
     "log-symbols": "^3.0.0",
     "node-notifier": "^6.0.0",
