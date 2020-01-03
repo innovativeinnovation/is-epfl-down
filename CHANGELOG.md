@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v6.0.0 / 2020-01-03
+
+  - Drop support for Node < 10
+  - Update dependencies
+  - Test against Node.js 13
+
 ### v5.0.1 / 2019-10-03
 
   - Update dependencies
