@@ -10,7 +10,6 @@
     "actu",
     "actus",
     "archiveweb",
-    "blog",
     "blogs",
     "bootstrap",
     "https://cadiwww.epfl.ch/listes",
@@ -67,9 +66,7 @@
     "tremplin",
     "uc",
     "web2018",
-    "wiki",
-    "wikis",
-    "wordpress"
+    "wiki"
   ],
   "faculties": [
     "cdh",
