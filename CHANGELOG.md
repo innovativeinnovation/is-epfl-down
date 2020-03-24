@@ -1,6 +1,11 @@
 Changelog
 =========
 
+### v6.0.1 / 2020-03-24
+
+  - Update dependencies
+  - Remove `wordpress.epfl.ch`, `blog.epfl.ch` and `wikis.epfl.ch`
+
 ### v6.0.0 / 2020-01-03
 
   - Drop support for Node < 10
