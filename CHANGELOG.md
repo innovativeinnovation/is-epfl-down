@@ -1,6 +1,11 @@
 Changelog
 =========
 
+### v6.0.3 / 2020-10-22
+
+  - Update dependencies
+  - Test against Node.js 15
+
 ### v6.0.2 / 2020-04-23
 
   - Update dependencies
