@@ -1,6 +1,11 @@
 Changelog
 =========
 
+### v6.0.4 / 2020-11-20
+
+  - Update dependencies
+  - Migrate travis-ci.org to .com
+
 ### v6.0.3 / 2020-10-22
 
   - Update dependencies
