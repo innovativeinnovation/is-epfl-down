@@ -13,9 +13,6 @@
   <a href="https://coveralls.io/github/innovativeinnovation/is-epfl-down?branch=master">
     <img alt="Coverage Status" src="https://coveralls.io/repos/github/innovativeinnovation/is-epfl-down/badge.svg?branch=master"/>
   </a>
-  <a href="https://david-dm.org/innovativeinnovation/is-epfl-down">
-    <img alt="Dependencies Status" src="https://david-dm.org/innovativeinnovation/is-epfl-down/status.svg"/>
-  </a>
   <a href="https://raw.githubusercontent.com/innovativeinnovation/is-epfl-down/master/LICENSE">
     <img alt="Apache License 2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
   </a>
