@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.com/innovativeinnovation/is-epfl-down">
-    <img alt="Travis Status" src="https://travis-ci.com/innovativeinnovation/is-epfl-down.svg?branch=master">
+  <a href="https://github.com/innovativeinnovation/is-epfl-down/actions">
+    <img alt="Build Status" src="https://github.com/innovativeinnovation/is-epfl-down/workflows/Build/badge.svg?branch=master">
   </a>
   <a href="https://coveralls.io/github/innovativeinnovation/is-epfl-down?branch=master">
     <img alt="Coverage Status" src="https://coveralls.io/repos/github/innovativeinnovation/is-epfl-down/badge.svg?branch=master"/>
