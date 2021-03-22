@@ -1,6 +1,14 @@
 Changelog
 =========
 
+### v6.1.0 / 2021-03-22
+
+  - Update dependencies
+  - Migrate from Travis CI to GitHub Actions
+  - Remove badge dependencies
+  - Remove InForm (`inform.epfl.ch`) from subdomains
+  - Replace `myvm.epfl.ch` with `portal-xaas` in subdomains
+
 ### v6.0.4 / 2020-11-20
 
   - Update dependencies
