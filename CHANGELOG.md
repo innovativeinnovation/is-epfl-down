@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v7.0.1 / 2022-03-03
+
+  - Test against Node.js 17
+  - Update dependencies
+  - Remove `infowww.epfl.ch` and `menus.epfl.ch` from subdomains
+
 ### v7.0.0 / 2021-06-04
 
   - Drop support for Node.js < 12
