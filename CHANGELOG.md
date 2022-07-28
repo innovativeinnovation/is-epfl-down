@@ -1,6 +1,11 @@
 Changelog
 =========
 
+### v7.0.2 / 2022-07-28
+
+  - Test against Node.js 18
+  - Update dependencies
+
 ### v7.0.1 / 2022-03-03
 
   - Test against Node.js 17
