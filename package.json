@@ -17,7 +17,7 @@
   "license": "Apache-2.0",
   "repository": "innovativeinnovation/is-epfl-down",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "main": "src/index.js",
   "bin": "src/cli.js",
@@ -33,15 +33,15 @@
     "coveralls": "npm run coverage && nyc report --reporter=lcov"
   },
   "devDependencies": {
-    "chai": "^4.3.6",
-    "eslint": "^8.19.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.4",
+    "chai": "^4.3.7",
+    "eslint": "^8.45.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-standard": "^4.1.0",
-    "mocha": "^10.0.0",
+    "mocha": "^10.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^15.1.0",
     "rewire": "^6.0.0"
@@ -52,6 +52,6 @@
     "log-symbols": "^4.1.0",
     "node-notifier": "^10.0.1",
     "play-sound": "^1.1.5",
-    "yargs": "^17.5.1"
+    "yargs": "^17.7.2"
   }
 }
